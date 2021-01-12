@@ -13,7 +13,8 @@
       "filter": "Filter Thematische Daten",
       "edit": "Szenarien Entwickeln",
       "settings": "Sprache",
-      "info": "GOAT Homepage besuchen"
+      "info": "GOAT Homepage besuchen",
+      "about": "About"
     },
     "login": {
       "title": "Login",
@@ -48,8 +49,8 @@
           "calcModus": "Berechnungsmodus",
           "alphaShapeMode": "Detaillierungsgrad Isochronen",
           "defaultNetwork": "Standard",
-          "modifiedNetwork": "Scenario",
-          "modifiedNetworkDoubleCalc": "Standard und Scenario",
+          "modifiedNetwork": "Szenario",
+          "modifiedNetworkDoubleCalc": "Vergleich",
           "routingProfile": "Routing Profil",
           "walking_standard": "Standard",
           "walking_elderly": "Senior",
@@ -164,7 +165,7 @@
         "New": "Neu",
         "Modified": "Geändert",
         "Restored": "restauriert",
-        "Deleted": "Gelöscht"
+        "deleted": "Gelöscht"
       },
       "status": {
         "Uploaded": "hochgeladen",
@@ -174,7 +175,7 @@
       "dataTypeInfo": "Benötigter Datei Typ",
       "geometryTypeInfo": "Benötigter Geometrie Typ",
       "requiredFields": "Erforderliche Attribute",
-      "referenceSystemInfo": "Referenzsystem sollte sein",
+      "referenceSystemInfo": "Erforderliches Referenzsystem",
       "featuresNotyetUploaded": "Objekte noch nicht hochgeladen. Klicken Sie auf Hochladen, um die Änderungen zu übernehmen.",
       "differentGeometryType": "Falscher Geometrie-Typ",
       "missingFields": "Fehlende Felder",
@@ -198,9 +199,16 @@
       }
     },
     "about": {
-      "title": "Über GOAT",
-      "content": "steht für Geo Open Accessibility Tool. Dieses Web-Tool ist Open Source, interaktiv, flexibel und kann in der Erreichbarkeitsplanung eingesetzt werden. GOAT befindet sich in der Entwicklung an der Professur für Siedlungsstruktur und Verkehrsplanung der TUM....",
-      "moreInfo": "Mehr Info"
+      "title": "About GOAT",
+      "whatIs": "<span><strong>What is GOAT?</strong></span>\n<p>Geo Open Accessibility Tool, or simply GOAT, is an open-source web tool that is interactive, flexible, and practical for accessibility planning. Currently under development at the&nbsp;<a href=\"https://www.bgu.tum.de/sv/startseite/\">Chair for Urban Structure and Transport Planning at TUM</a>, GOAT is capable of modeling walking and cycling accessibility. Frequent enhancements are made to improve its performance and add additional functionality.</p>",
+      "usedData": "<span><strong>Used Data</strong></span><p>GOAT uses mainly Open Data. The following data sets are either displayed in the different layers or used in the background to perform the analysis:&nbsp;</p>",
+      "license": "<span><strong>Licence</strong></span>\n<p>GOAT is licensed under GPL-3.0<br /><span>If you use GOAT for your analysis, please cite them as:&nbsp;</span><br /><span><strong>Geo Open Accessibility Tool - GOAT (Version 0.8) [Webtool]. Retrieved from&nbsp;<a  href=\"https://muenchen.open-accessibility.org/\" rel=\"nofollow\">https://muenchen.open-accessibility.org/</a></strong></span></p>\n",
+      "moreInfo": "More Info",
+      "layerAttributeTable": {
+        "data": "Layers",
+        "source": "Source",
+        "yearTimestamp": "Year / Timestamp"
+      }
     }
   },
   "isochrones": {
@@ -222,10 +230,10 @@
       "clear": "Löschen",
       "calculate": "Berechnen",
       "studyAreaInfoLabel": "Wählen Sie <b> Orte </b> auf der Karte aus und <b> Ziele </b> im Filter Thematische Daten aus, um die Berechnung zu ermöglichen.",
-      "drawBoundary": "Grenze zeichnen",
+      "drawPolygon": "Grenze zeichnen",
       "amenityCount": "Anzahl Einrichtungen",
       "limit": "Grenze",
-      "drawBoundaryInfoLabel": "Zeichnen Sie eine <b> Grenze</b> auf der Karte ein und wählen Sie <b> Ziele </b> im Filter Thematische Daten aus aus, um die Berechnung zu ermöglichen.",
+      "drawPolygonInfoLabel": "Zeichnen Sie eine <b> Grenze</b> auf der Karte ein und wählen Sie <b> Ziele </b> im Filter Thematische Daten aus aus, um die Berechnung zu ermöglichen.",
       "tableDataTitle": "Daten Multi-Isochrone"
     },
     "options": {
@@ -238,8 +246,8 @@
       "calcModus": "Berechnungsmodus",
       "alphaShapeMode": "Detaillierungsgrad Isochronen",
       "defaultNetwork": "Standard",
-      "modifiedNetwork": "Scenario",
-      "modifiedNetworkDoubleCalc": "Standard und Scenario",
+      "modifiedNetwork": "Szenario",
+      "modifiedNetworkDoubleCalc": "Vergleich",
       "routingProfile": "Routing Profil",
       "walking_standard": "Standard",
       "walking_elderly": "Senior",
@@ -271,13 +279,14 @@
       "searchPois": "Ziele suchen",
       "selectTimeMsg": "Zeit zum Filtern auswählen",
       "noDataMsg": "Keine Daten für ausgewählte Zeit",
-      "selectAmenitiesMsg": "Wählen Sie <b> Ziele </b> und die <b> Reisezeit </b> aus, um die Tabelle zu filtern.",
+      "selectAmenitiesMsg": "Wählen Sie <b> Ziele (Thematische Daten)</b> und die <b> Reisezeit </b> aus, um die Tabelle zu filtern.",
       "table": {
         "pois": "Ziele",
         "isochrone": "Isochrone",
         "studyArea": "Ort",
         "population": "Bevölkerung",
-        "reachedPopulation": "Erreichbare Bevölkerung"
+        "reachedPopulation": "Erreichbare Bevölkerung",
+        "shared": "Geteilt"
       }
     },
     "isochrones": "Isochronen",
@@ -291,7 +300,9 @@
     },
     "additionalLayers": {
       "defaultNetwork": "Standard Straßennetzwerk",
-      "inputNetwork": "Modifiziertes Straßennetzwerk"
+      "inputNetwork": "Modifiziertes Straßennetzwerk",
+      "studyArea": "Study Area",
+      "startingPoints": "Starting Points"
     },
     "pickColor": {
       "title": "Farbe der Isochrone"
@@ -330,7 +341,8 @@
       "cantDeleteAllScenarioFeatures": "Die Szenarien-Daten können aktuell leider nicht gelöscht werden.",
       "allScenarioFeaturesDelete": "Alle Szenarien-Daten wurden gelöscht",
       "noScenarioFeatureChangeAvailable": "Ändern Sie zuerst das Netzwerk oder die Landnutzung.",
-      "cantPrintBaseLayer": "Diese Basiskarte kann nicht gedruckt werden."
+      "cantPrintBaseLayer": "Diese Basiskarte kann nicht gedruckt werden.",
+      "cantExportScenario": "Ein Fehler ist aufgetreten. Szenario kann nicht exportiert werden!"
     },
     "layerGroup": {
       "poisLayers": "POIs",
@@ -346,8 +358,10 @@
     "layerName": {
       "pois": "Point of Interest",
       "administrativeUnits": "Administrative Grenzen",
+      "accidentsPedestrians": "Unfälle mit Fußgängern",
       "accidents_pedestrian_2018": "Unfälle mit Fußgängern (2018)",
       "accidents_pedestrian_2017": "Unfälle mit Fußgängern (2017)",
+      "accidentsCyclists": "Unfälle mit Radfahrern",
       "accidents_bike_2018": "Unfälle mit Radfahrern (2018)",
       "accidents_bike_2017": "Unfälle mit Radfahrern (2017)",
       "bicycle_counting_stations": "Raddauerzählstellen (2019)",
@@ -366,6 +380,7 @@
       "footpathWidth": "Fußwegbreite",
       "illuminance": "Beleuchtung",
       "lanes": "Anzahl der Fahrspuren",
+      "modeshare": "Modal Split",
       "noiseAircraftLDEN": "Fluglärm - Pegelraster LDEN",
       "noiseAircraftLNight": "Fluglärm - Pegelraster LNight",
       "noiseProtectionBauleitplanung": "Lärmschutzbereich zur Lenkung der Bauleitplanung",
@@ -377,6 +392,7 @@
       "streetCrossings": "Querungsmöglichkeiten",
       "streetFurniture": "Straßenmöbelierung",
       "streetFurnitureBicycles": "Fahrradständer",
+      "cyclewayQuality_munichways": "Radwegequalität (Munichways)",
       "surface": "Oberfläche",
       "wheelchairUsability": "Barrierefreiheit",
       "areaIsochrone": "Isochronengröße",
@@ -478,7 +494,8 @@
     "contextMenu": {
       "deleteIsochrone": "Isochrone löschen",
       "zoomIn": "Zoom In",
-      "zoomOut": "Zoom Out"
+      "zoomOut": "Zoom Out",
+      "redoCalculation": "Erneut berechnen"
     },
     "osmMode": {
       "tasks": "OSM Mapping Aufgaben",
@@ -507,7 +524,7 @@
           "missingKeyWord": "Höchstgeschwindigkeiten",
           "layerName": "Wege",
           "stepsDesc": {
-            "clickFeatureInMap": "Die roten Linien in der Karte zeigen die Mapping-Aufgaben. Wählen Sie eine davon aus.",
+            "clickFeatureInMap": "Die blauen Linien in der Karte zeigen die Mapping-Aufgaben. Wählen Sie eine davon aus.",
             "clickEditWithOsm": "Durch Klicken auf den <b>'In OSM bearbeiten'</b> Link werden Sie zum OSM iD-Editor weitergeleitet.",
             "fillInOSMiD": "Fügen Sie das fehlende Attribut 'maxspeed' im OSM Editor hinzu. Beachten Sie hierzu die entsprechenden Richtlinien aus dem OSM-Wiki. Die fehlenden Informationen können z.B. anhand von Mapillary-Aufnahmen oder durch einen Vor-Ort Besuch ermittelt werden."
           }
@@ -516,9 +533,27 @@
           "missingKeyWord": "Oberflächen",
           "layerName": "Wege",
           "stepsDesc": {
-            "clickFeatureInMap": "Die roten Linien in der Karte zeigen die Mapping-Aufgaben. Wählen Sie eine davon aus.",
+            "clickFeatureInMap": "Die blauen Linien in der Karte zeigen die Mapping-Aufgaben. Wählen Sie eine davon aus.",
             "clickEditWithOsm": "Durch Klicken auf den <b>'In OSM bearbeiten'</b> Link werden Sie zum OSM iD-Editor weitergeleitet.",
             "fillInOSMiD": "Fügen Sie das fehlende Attribut 'surface' im OSM Editor hinzu. Beachten Sie hierzu die entsprechenden Richtlinien aus dem OSM-Wiki. Die fehlenden Informationen können z.B. anhand von Mapillary-Aufnahmen oder durch einen Vor-Ort Besuch ermittelt werden."
+          }
+        },
+        "osm-mapping-cycleways-width": {
+          "missingKeyWord": "Radwegebreite",
+          "layerName": "Wege",
+          "stepsDesc": {
+            "clickFeatureInMap": "Die blauen Linien in der Karte zeigen die Mapping-Aufgaben. Wählen Sie eine davon aus.",
+            "clickEditWithOsm": "Durch Klicken auf den <b>'In OSM bearbeiten'</b> Link werden Sie zum OSM iD-Editor weitergeleitet.",
+            "fillInOSMiD": "Fügen Sie den Wegen das fehlende Attribut 'width' im OSM Editor hinzu. Beachten Sie hierzu die entsprechenden Richtlinien aus dem OSM-Wiki. Die fehlenden Informationen können z.B. anhand von Mapillary-Aufnahmen oder durch einen Vor-Ort Besuch ermittelt werden."
+          }
+        },
+        "osm-mapping-cycleways-segregated": {
+          "missingKeyWord": "Trennung zwischen Fuß- und Radverkehr",
+          "layerName": "Wege",
+          "stepsDesc": {
+            "clickFeatureInMap": "Die blauen Linien in der Karte zeigen die Mapping-Aufgaben. Wählen Sie eine davon aus.",
+            "clickEditWithOsm": "Durch Klicken auf den <b>'In OSM bearbeiten'</b> Link werden Sie zum OSM iD-Editor weitergeleitet.",
+            "fillInOSMiD": "Fügen Sie den Wegen das fehlende Attribut 'segregated' im OSM Editor hinzu. Beachten Sie hierzu die entsprechenden Richtlinien aus dem OSM-Wiki. Die fehlenden Informationen können z.B. anhand von Mapillary-Aufnahmen oder durch einen Vor-Ort Besuch ermittelt werden."
           }
         },
         "osm-mapping-ways-wheelchair": {
@@ -529,9 +564,18 @@
           "missingKeyWord": "Gebäudetypen",
           "layerName": "Gebäude",
           "stepsDesc": {
-            "clickFeatureInMap": "Die roten Polygone in der Karte zeigen die Mapping-Aufgaben. Wählen Sie eine davon aus.",
+            "clickFeatureInMap": "Die blauen Polygone in der Karte zeigen die Mapping-Aufgaben. Wählen Sie eine davon aus.",
             "clickEditWithOsm": "Durch Klicken auf den <b>'In OSM bearbeiten'</b> Link werden Sie zum OSM iD-Editor weitergeleitet.",
             "fillInOSMiD": "Editieren Sie das Attribut 'building' im OSM Editor. Beachten Sie hierzu die entsprechenden Richtlinien aus dem OSM-Wiki. Die fehlenden Informationen können z.B. anhand von Mapillary-Aufnahmen und Luftbildern oder durch einen Vor-Ort Besuch ermittelt werden."
+          }
+        },
+        "osm-mapping-parking-lane": {
+          "missingKeyWord": "Parkspuren",
+          "layerName": "Parken",
+          "stepsDesc": {
+            "clickFeatureInMap": "Die blauen Linien in der Karte zeigen die Mapping-Aufgaben. Wählen Sie eine davon aus.",
+            "clickEditWithOsm": "Durch Klicken auf den <b>'In OSM bearbeiten'</b> Link werden Sie zum OSM iD-Editor weitergeleitet.",
+            "fillInOSMiD": "Fügen Sie das fehlende Attribut 'parking:lane:both' bzw. 'parking:lane:left' bzw. 'parking:lane:right' im OSM Editor hinzu. Beachten Sie hierzu die entsprechenden Richtlinien aus dem OSM-Wiki. Die fehlenden Informationen können Mapillary-Aufnahmen, Luftbilder oder durch einen Vor-Ort Besuch ermittelt werden."
           }
         }
       },
@@ -619,8 +663,8 @@
     "waterpark": "Schwimmbad",
     "discount_gym": "Discount Fitnessstudio",
     "gym": "Fitnessstudio",
-    "yoga":"Yoga",
-    "outdoor_fitness_station":"Outdoor Fitness",
+    "yoga": "Yoga",
+    "outdoor_fitness_station": "Outdoor Fitness",
     "population": "Bevölkerung"
   },
   "$vuetify": {
@@ -667,19 +711,25 @@
       "ways": {
         "way_type": "Wegetyp",
         "surface": "Oberfläche",
-        "wheelchair": "Rohlstuhl"
+        "wheelchair": "Rollstuhl"
       },
       "pois": {
         "amenity": "Einrichtung",
         "name": "Name (Optional)",
         "opening_hours": "Öffnungszeiten (Optional)"
       },
-      "buildings":{
-      "building": "Gebäudetyp",
-      "building_levels": "Anzahl Geschosse",
-      "building_levels_residential": "Anzahl Geschosse Wohnen",
-      "population": "Einwohneranzahl (optional)",
-      "gross_floor_area": "Geschossfläche"
+      "buildings": {
+        "building": "Gebäudetyp",
+        "building_levels": "Anzahl Geschosse",
+        "building_levels_residential": "Anzahl Geschosse Wohnen",
+        "population": "Einwohneranzahl (optional)",
+        "gross_floor_area": "Geschossfläche",
+        "labels": {
+          "area": "Fläche",
+          "building_levels": "Anzahl Geschosse",
+          "gross_floor_area": "Geschossfläche",
+          "population": "Einwohner"
+        }
       }
     },
     "listValues": {
@@ -699,7 +749,6 @@
         "residential": "Wohnen",
         "commercial": "Gewerbe",
         "public": "Öffentliche Einrichtung"
-  
       }
     }
   }
