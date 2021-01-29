@@ -8,7 +8,7 @@ ALTER TABLE study_area DROP COLUMN IF EXISTS area;
 ALTER TABLE study_area ADD COLUMN area numeric;
 UPDATE study_area SET area = st_area(geom::geography);
 
-
+-- Classificate buildings betwen potential residents and no_residents.
 CREATE TABLE buildings as 
 SELECT ROW_NUMBER() OVER() AS gid, p.osm_id,p.building, 
 CASE 
@@ -25,7 +25,7 @@ AND ST_Intersects(s.geom,p.way);
 
 CREATE INDEX ON buildings USING GIST(geom);
 ALTER TABLE buildings ADD PRIMARY key(gid);
-
+-- Extract polygons with landuse from 
 CREATE TABLE landuse_osm AS 
 SELECT ROW_NUMBER() OVER() AS gid, landuse, tourism, amenity, name, tags, way AS geom 
 FROM planet_osm_polygon 
