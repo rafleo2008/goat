@@ -18,3 +18,4 @@ node_modules
 /app/api/flask/lib
 /app/api/flask/lib64
 __pycache__
+/app/database/data/
